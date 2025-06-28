@@ -1,7 +1,286 @@
- .main {
-      background: url('c:\skinproduct\b3.jpg') no-repeat;
+  * {
+      margin: 0;
+      box-sizing: border-box;
+      text-decoration: none;
+      padding: 0;
+    }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: url('https://img.freepik.com/premium-photo/attractive-young-woman-holding-jar--camera-while-posing-studio-brown-wall-stock-photo_2221-8289.jpg') no-repeat;
       background-size: cover;
-      height: 100vh;
       background-position: 50% 50%;
       width: 100%;
+    }
+    .navbar {
+      background: rgb(137, 207, 240);
+      font-family: 'Rubik', sans-serif;
+      padding: 15px 0;
+    }
+    .navdiv {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0;
+      position: relative;
+    }
+    .left-nav {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    .logo {
+      flex: 0 0 auto;
+      margin-right: 0;
+    }
+
+    .logo a {
+      font-size: 28px;
+      color: white;
+      font-weight: bold;
+      font-family: 'Lobster', sans-serif;
+      text-decoration: none;
+    }
+    .box {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #eee;
+      width: 220px;
+      height: 36px;
+      border-radius: 50px;
+      display: flex;
+      align-items: center;
+      padding: 0 12px;
+      box-sizing: border-box;
+      z-index: 1;
+    }
+    .box input[type="text"] {
+      width: 100%;
+      border: none;
+      outline: none;
+      background: none;
+      font-size: 14px;
+      border-radius: 50px;
+      padding: 5px 6px;
+    }
+    .fa-solid {
+      color: #89cff0;
+      font-size: 20px;
+      margin-left: 10px;
+      transition: color 0.2s;
+    }
+    .fa-solid:hover {
+      color: #333;
+      cursor: pointer;
+    }
+    ul {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    li {
+      list-style: none;
+      display: inline-block;
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      justify-content: flex-end;
+      padding: 0 20px;
+      border-bottom: 2px solid transparent;
+    }
+
+    .nav-links li a {
+      color: white;
+      font-size: 14px; 
+      font-weight: bold;
+      margin-right: 10px;
+      transition: text-decoration none;
+      text-decoration: none; 
+      text-transform: uppercase;
+    }
+
+    nav  ul li a:hover {
+      color: white;
+      border-bottom: 2px solid #fff;
+      text-shadow: 0 0 10px white;
+    }
+
+    li:last-child a {
+      margin-right: 0;
+    }
+    li a:active,
+    li a:focus {
+      text-decoration: none;
+      outline: none;
+      border-bottom: none;
+    }
+    .fa-cart-shopping {
+      color: #fff !important;
+    }
+    .fa-user {
+      color: #fff !important;
+    }
+    @media (max-width: 700px) {
+      .navdiv {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+      }
+      .box {
+        margin: 10px 0;
+        width: 100%;
+        max-width: 100%;
+      }
+      ul {
+        justify-content: center;
+      }
+    }
+    .main {
+      position: relative;
+      padding: 5rem 2rem;
+      font-family: 'Rubik', sans-serif;
+    }
+    .main h1{
+      color: white;
+      font-size: 50px;
+      font-weight: 800;
+    }
+    .main h1 span {
+      color: #89cff0;
+      font-size: 60px;
+      font-weight: 900;
+    }
+
+    .main button {
+      background-color: #89cff0;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      font-size: 16px;
+      font-weight: 600;
+      border-radius: 2rem;
+      cursor: pointer;
+      transition: background-color 0.3s, transform .3s;
+      margin: 20px 0;
+    }
+    .main button:hover {
+      scale: 1.05;
+    }
+
+
+
+    .why-us {
+      padding: 60px 0;
+      background: rgba(255, 255, 255, 0.8);
+      margin-top: 400px;
+    }
+
+    .why-us .section-content{
+      display: flex;
+      gap: 50px;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .why-us .why-us-image-wrapper .why-us-image {
+      width: 400px;
+      height: 400px;
+      object-fit: cover;
+      border-radius: var(--radius, 20px);
+    }
+  
+   .why-us-title {
+      text-align: center;
+      padding: 20px 0 20px;
+      text-transform: uppercase;
+      font-size: 2rem;
+    }
+
+    .why-us-title::after{
+      content: "";
+      width: 80px;
+      height: 5px;
+      display: block;
+      margin: 10px auto 0;
+      background: #89cff0;
+    }
+    .why-us-text {
+      max-width: 500px;
+      margin: 0 auto;
+      font-size: 1.1rem;
+      color: #222;
+      line-height: 1.7;
+    }
+    .why-us-text .text {
+      margin-bottom: 1.2em;
+    }
+    @media (max-width: 900px) {
+      .why-us .section-content {
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+      }
+      .why-us .why-us-image-wrapper .why-us-image {
+        width: 90vw;
+        max-width: 350px;
+        height: auto;
+      }
+    }
+    @media (max-width: 700px) {
+      .main {
+        position: static;
+        left: 0;
+        top: 0;
+        margin-top: 30px;
+        text-align: center;
+      }
+      .why-us {
+        padding: 60px 0;
+      }
+    }
+    .why-us-title,
+    .why-us-text {
+      font-family: 'Montserrat', 'Rubik', Arial, sans-serif;
+    }
+    .footer{
+      width: 100%;
+      padding: 100px 15%;
+      background: rgba(255, 255, 255, 0.8);
+      color: black;
+      display: flex;
+      margin-top: 100px;
+      font-family: 'Rubik', sans-serif;
+    }
+
+    .footer div{
+      text-align: center;
+    }
+    .col-2{
+      flex-grow: 2;
+    }
+    .footer div h3{
+      font-weight: 300;
+      margin-bottom: 30px;
+      letter-spacing: 1px;
+    }
+    .col-1 a{
+      display: block;
+      text-decoration: none;
+      color: black;
+      margin-bottom: 10px;
+    }
+    .social-icons{
+      margin-top: 30px;
+    }
+    .social-icons i{
+      font-size: 22px;
+      margin: 10px;
+      cursor: pointer;
     }
