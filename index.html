@@ -9,6 +9,23 @@
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <link href="https://fonts.googleapis.com/css?family=Rubik:400,700&display=swap" rel="stylesheet">
+  <style>
+    .shop-now-btn {
+  display: inline-block;
+  background: #89cff0;
+  color: #fff;
+  padding: 14px 32px;
+  border-radius: 24px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background 0.2s;
+  margin-top: 18px;
+}
+.shop-now-btn:hover {
+  background: #5bb3e6;
+}
+  </style>
 </head>
 <body>
 
@@ -17,22 +34,22 @@
     <div class="navdiv">
       <div class="logo"><a href="#">Merit's Store</a></div>
       <div class="box">
-        <input type="text" placeholder="Search products..." />
+        <input type="text" id="product-search" placeholder="Search products..." />
         <i class="fa-solid fa-magnifying-glass"></i>
       </div>
       <ul class="nav-links">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Products</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#why-us">About</a></li>
+        <li><a href="#contact">Contact</a></li>
         <li>
-          <a href="#" style="display: flex; align-items: center;">
+          <a href="#cart" id="cart-link" style="display: flex; align-items: center;">
             <i class="fa-solid fa-cart-shopping"></i>
             <span id="cart-count" style="margin-left: 4px; font-size: 13px;">0</span>
           </a>
         </li>
         <li>
-          <a href="#" style="display: flex; align-items: center;">
+          <a href="profile.html" id="account-link" style="display: flex; align-items: center;">
             <i class="fa-solid fa-user"></i>
           </a>
         </li>
@@ -43,11 +60,11 @@
   
   <div class="main">
     <h1>Glow Naturally With <br> Science + <span>Nature !</span></h1>
-    <button>Shop Now!</button>
+    <a href="#products" class="shop-now-btn">Shop Now!</a>
   </div>
 
   
-  <section class="why-us">
+  <section class="why-us" id="why-us">
     <div class="section-content">
       <div class="why-us-image-wrapper">
         <img src="images/cerave-cleanser.png" alt="CeraVe Hydrating Facial Cleanser"
@@ -61,32 +78,90 @@
       </div>
     </section>
 
-    <footer class="footer">
-      <div class="col-1">
-        <h3>Quick Links</h3>
-        <a href="#">Home</a>
-        <a href="#">About</a>
-        <a href="#">Products</a>
-        <a href="#">Contact Us</a>
-        <a href="#">Blog</a>
-      </div>
-      <div class="col-2">
-        <div class="footer-contact">
-         <h4>Contact Us</h4> 
-         <p>Email:support@meritsstore.com</p>
-         <p>Phone: +234-906-130-5967</p>
+    
+     <div class="container" id="products">
+          <header> 
+            <div class="PRODUCT LIST">
+              
+              <div class="products-grid">
+              <div class="product-item">
+                <img src="images/cerave-cleanser.png" alt="CeraVe Hydrating Facial Cleanser">
+                <h3>CeraVe Hydrating Facial Cleanser</h3>
+                <p>#8500</p>
+                <button>Add to Cart</button>
+              </div>
+              <div class="product-item">
+                <img src="images/cerave_moisturizing_cream.png" alt="Cerave Moisturizing Cream">
+                <h3>Cerave Moisturizing Cream</h3>
+                <p>#9200</p>
+                <button>Add to Cart</button>
+              </div>
+                <div class="product-item">
+                <img src="images/cerave-moisturizing-lotion-moisturizer.png" alt="CeraVe Moisturizing Lotion">
+                <h3>CeraVe Moisturizing Lotion</h3>
+                <p>#7500</p>
+                <button>Add to Cart</button>
+                </div>
+                <div class="product-item">
+                <img src="images/teatree_facial_scrub.png" alt="Tea Tree Facial Scrub">
+                <h3>Tea Tree Essentials Facial Scrub</h3>
+                <p>#7200</p>
+                <button>Add to Cart</button>
+              </div>
+              <div class="product-item">
+                <img src="images/tea-tree facial toner.png" alt="Tea Tree Facial Toner">
+                <h3>Tea Tree Essentials Facial Toner</h3>
+                <p>#6500</p>
+                <button>Add to Cart</button>
+              </div>
+              <div class="product-item">
+                <img src="images/tea-tree-foaming-face-wash.png" alt="Tea Tree Face Wash">
+                <h3>Tea Tree Essentials Face Wash</h3>
+                <p>#5200</p>
+                <button>Add to Cart</button>
+              </div>
+            </div>
+          </header>
         </div>
 
-         <div class="social-icons">
-         <i class="fa-brands fa-facebook"></i>
-         <i class="fa-brands fa-twitter"></i>
-         <i class="fa-brands fa-instagram"></i>
-         <i class="fa-brands fa-linkedin"></i>
-        </div>
+        
+        <section id="about">
 
-      <div class="footer-bottom">
-        <p>©2025 Merit's Store. All rights reserved.</p>
-      </div>
-    </footer>
+</section>
+
+
+<footer class="footer" id="contact">
+  <div class="col-1">
+    <h3>Quick Links</h3>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Products</a>
+    <a href="#">Contact Us</a>
+    <a href="#">Blog</a>
+  </div>
+  <div class="col-2">
+    <div class="footer-contact">
+     <h4>Contact Us</h4> 
+     <p>Email:support@meritsstore.com</p>
+     <p>Phone: +234-906-130-5967</p>
+    </div>
+    <div class="social-icons">
+     <i class="fa-brands fa-facebook"></i>
+     <i class="fa-brands fa-twitter"></i>
+     <i class="fa-brands fa-instagram"></i>
+     <i class="fa-brands fa-linkedin"></i>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>©2025 Merit's Store. All rights reserved.</p>
+  </div>
+</footer>
+
+<div id="cart-modal" style="display:none; position:fixed; top:0; right:0; width:320px; height:100vh; background:#fff; box-shadow:-2px 0 12px rgba(0,0,0,0.15); z-index:9999; padding:24px; overflow-y:auto;">
+  <h3>Your Cart</h3>
+  <ul id="cart-items" style="list-style:none; padding:0;"></ul>
+  <button id="close-cart" style="margin-top:20px; padding:8px 16px; border:none; background:#89cff0; color:#fff; border-radius:8px; cursor:pointer;">Close</button>
+</div>
+    <script src="script.js"></script>
 </body>
 </html>
